@@ -50,7 +50,25 @@ class Stack{
 				return top == null;
 		}
 
-	
+	public void clear(){
+			top = null;
+		}
+		
+		public int search(int data){
+				Node temp = top;
+				int index = 0;
+				while(temp!=null){
+					if(temp.data == data){
+					return index;	
+					}
+					index++;
+					temp = temp.next;
+					
+				}
+				return -1;
+			
+			
+		}
 
 
 
