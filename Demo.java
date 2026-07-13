@@ -15,6 +15,30 @@ class Stack{
 			n1.next = top;
 			top = n1;
 		}
+	public void pop(){
+			if(top!=null){
+			top = top.next;	
+				
+			}	
+		}
+		
+		public void printStack(){
+				System.out.print("[");
+				Node temp = top;
+				while(temp!=null){
+					System.out.print(temp.data+",");
+					temp = temp.next;
+				}
+				System.out.println(isEmpty()?"empty]":"\b\b]");
+				
+		}
+
+
+
+
+
+
+	
 	
 }
 
