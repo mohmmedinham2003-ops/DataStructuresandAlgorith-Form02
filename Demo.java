@@ -1,5 +1,5 @@
 import java.util.*;
-class Node(){
+class Node{
 		int data;
 		Node next;
 		Node(int data){
@@ -7,6 +7,7 @@ class Node(){
 		}
 	
 }
+
 class Stack{
 		private Node top;
 		
@@ -15,7 +16,8 @@ class Stack{
 			n1.next = top;
 			top = n1;
 		}
-	public void pop(){
+		
+		public void pop(){
 			if(top!=null){
 			top = top.next;	
 				
@@ -26,14 +28,13 @@ class Stack{
 				System.out.print("[");
 				Node temp = top;
 				while(temp!=null){
-					System.out.print(temp.data+",");
+					System.out.print(temp.data+", ");
 					temp = temp.next;
 				}
-				System.out.println(isEmpty()?"empty]":"\b\b]");
+			System.out.println(isEmpty() ?"empty]":"\b\b]");
 				
 		}
-
-	
+		
 		public int size(){
 			Node temp = top;
 			int count = 0;
@@ -49,8 +50,8 @@ class Stack{
 		public boolean isEmpty(){
 				return top == null;
 		}
-
-	public void clear(){
+		
+		public void clear(){
 			top = null;
 		}
 		
@@ -69,7 +70,7 @@ class Stack{
 			
 			
 		}
-	
+		
 		public int[] toArray(){
 		int[] tempDataArray = new int[size()];
 		Node temp = top;
@@ -81,25 +82,10 @@ class Stack{
 		return tempDataArray;	
 			
 		}
-
-
-
-
-
-
-	
 	
 }
 
-
-
-
-
-
-
-
-
-class Demo(){
+class Demo{
 		public static void main(String args[]){
 			Stack s1 = new Stack();
 			s1.push(100);
@@ -109,8 +95,8 @@ class Demo(){
 			s1.push(500);
 			s1.printStack();
 				
-			
-			}
+			int[] dataArray = s1.toArray();
+			System.out.println(Arrays.toString(dataArray));
 	
-	
+		}
 }
