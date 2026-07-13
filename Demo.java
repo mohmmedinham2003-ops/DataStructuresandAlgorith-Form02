@@ -33,6 +33,25 @@ class Stack{
 				
 		}
 
+	
+		public int size(){
+			Node temp = top;
+			int count = 0;
+			while(temp!=null){
+				count++;
+				temp = temp.next;
+				
+			}	
+			return count;
+			
+		}
+		
+		public boolean isEmpty(){
+				return top == null;
+		}
+
+	
+
 
 
 
