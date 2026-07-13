@@ -7,7 +7,16 @@ class Node(){
 		}
 	
 }
-
+class Stack{
+		private Node top;
+		
+		public void push(int data){
+			Node n1 = new Node(data);
+			n1.next = top;
+			top = n1;
+		}
+	
+}
 
 
 
