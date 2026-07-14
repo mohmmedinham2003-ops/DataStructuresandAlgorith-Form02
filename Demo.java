@@ -114,7 +114,21 @@ class Node{
 }
 
 class Queue{
-	
+	private Node front;
+	public void add(int data){
+		Node n1 = new Node(data);
+			if(isEmpty()){
+			front =n1;	
+			}else{
+			Node lastNode = front;
+			while(lastNode.next!=null){
+				lastNode = lastNode.next;
+			}
+			lastNode.next = n1;	
+		}
+		
+		
+	}
 	
 }
 
