@@ -1,4 +1,5 @@
-import java.util.*;
+//Stack Linked
+/*import java.util.*;
 class Node{
 		int data;
 		Node next;
@@ -99,4 +100,47 @@ class Demo{
 			System.out.println(Arrays.toString(dataArray));
 	
 		}
+}*/
+
+//Queue Linked
+
+import java.util.*;
+
+class Node{
+	
+	
 }
+
+class Queue{
+	
+	
+}
+
+
+class Demo{
+	public static void (String args[]){
+		
+		
+	}	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
