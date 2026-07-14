@@ -129,6 +129,24 @@ class Queue{
 		
 		
 	}
+
+	public void remove(){
+		if(front!=null){
+		front = front.next;	
+		}	
+		
+	}
+	
+	public void printQueue(){
+		System.out.print("[");
+		Node temp = front;
+		while(temp!=null){
+		System.out.print(temp.data);
+		temp = temp.next;	
+		}
+		System.out.println(isEmpty() ?"empty]":"\b\b");
+		
+	}
 	
 }
 
