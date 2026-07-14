@@ -121,7 +121,16 @@ class Queue{
 
 class Demo{
 	public static void (String args[]){
+		Queue q1 = new Queue();
+		q1.add(100);
+		q1.add(200);
+		q1.add(300);
+		q1.add(400);
+		q1.add(500);
+		q1.printQueue();
 		
+		q1.remove();
+		q1.printqueue();
 		
 	}	
 	
