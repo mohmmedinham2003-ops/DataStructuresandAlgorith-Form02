@@ -104,7 +104,7 @@ class Demo{
 
 //Queue Linked
 
-import java.util.*;
+/*import java.util.*;
 
 class Node{
 	int data;
@@ -210,6 +210,11 @@ class Demo{
 	}	
 	
 }
+*/
+
+
+
+
 
 
 
