@@ -245,6 +245,7 @@ class List{
 		
 		}
 	}
+	
 	public void addLast(int data){
 		add(size(),data);
 	}
@@ -259,6 +260,7 @@ class List{
 	public void removeFirst(int data){
 		remove(0);
 	}
+	
 	
 	
 	
