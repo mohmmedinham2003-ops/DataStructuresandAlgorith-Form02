@@ -243,8 +243,23 @@ class List{
 			temp.next = n1;
 			}
 		
+		}
 	}
+	public void addLast(int data){
+		add(size(),data);
 	}
+	
+	public void addfirst(int data){
+		add(0,data);
+	}
+	public removeLast(){
+	remove(size()-1);	
+	}
+	
+	public void removeFirst(int data){
+		remove(0);
+	}
+	
 	
 	
 }
