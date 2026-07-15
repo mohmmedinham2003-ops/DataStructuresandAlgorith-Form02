@@ -178,7 +178,16 @@ class Queue{
 		}
 		return -1;
 	}
-	
+	public int[] toArray(){
+		int[] tempDataArray = new int[size()];
+		Node temp = front;
+		for(int i =0;i<tempDataArray.length;i++){
+				tempDataArray[i] = temp.data;
+				temp = temp.next;
+		}
+		return tempDataArray;
+		
+	}
 }
 
 
