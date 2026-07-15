@@ -109,7 +109,7 @@ import java.util.*;
 class Node{
 	int data;
 	Node next;
-	Node(int data)({this.data = data;}
+	Node(int data){this.data = data;}
 	
 }
 
@@ -129,7 +129,7 @@ class Queue{
 		
 		
 	}
-
+	
 	public void remove(){
 		if(front!=null){
 		front = front.next;	
@@ -141,17 +141,17 @@ class Queue{
 		System.out.print("[");
 		Node temp = front;
 		while(temp!=null){
-		System.out.print(temp.data);
+		System.out.print(temp.data+", ");
 		temp = temp.next;	
 		}
-		System.out.println(isEmpty() ?"empty]":"\b\b");
+		System.out.println(isEmpty() ?"empty]":"\b\b]");
 		
 	}
-
+	
 	public int size(){
 			Node temp = front;
 			int count = 0;
-			while(temp!=0){
+			while(temp!=null){
 				count++;
 				temp = temp.next;
 			}
@@ -163,14 +163,15 @@ class Queue{
 			return front == null;
 		
 	}
+	
 	public void clear(){
 			front = null;
 	}
-	public void int search(int data){
+	public  int search(int data){
 		Node temp = front;
 		int index = 0;
 		while(temp!=null){
-			if(temp.data = data){
+			if(temp.data == data){
 			return index;	
 			}
 			index++;
@@ -188,11 +189,12 @@ class Queue{
 		return tempDataArray;
 		
 	}
+	
 }
 
 
 class Demo{
-	public static void (String args[]){
+	public static void main(String args[]){
 		Queue q1 = new Queue();
 		q1.add(100);
 		q1.add(200);
@@ -202,16 +204,12 @@ class Demo{
 		q1.printQueue();
 		
 		q1.remove();
-		q1.printqueue();
+		q1.printQueue();
+		
 		
 	}	
 	
 }
-
-
-
-
-
 
 
 
