@@ -211,16 +211,43 @@ class Demo{
 	
 }
 */
+
 import java.util.*;
 class Node{
-	
+	int data;
+	Node next;
+	Node(int data){this.data = data;}
 	
 }
 
 class List{
+	private Node first;
+	public void add(int data){
+		addLast(data);
+	}
+	public void add(int index,int data){
+			if(index >=0 && index <= size()){
+				Node n1 = new Node();
+				if(index ==0){
+				n1.next = first;
+				first = n1;	
+			
+			}else{
+			int count =0;
+			Node temp = first;
+			while(count<inde-1){
+			count++;
+			remp = temp.next;	
+			}	
+			n1.next = temp.next;
+			temp.next = n1;
+			}
+		
+	}
+	}
+	
 	
 }
-
 
 class Demo{
 		public static void main(String args[]){
