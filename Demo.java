@@ -147,6 +147,22 @@ class Queue{
 		System.out.println(isEmpty() ?"empty]":"\b\b");
 		
 	}
+
+	public int size(){
+			Node temp = front;
+			int count = 0;
+			while(temp!=0){
+				count++;
+				temp = temp.next;
+			}
+			return count;
+		
+	}
+	
+	public boolean isEmpty(){
+			return front == null;
+		
+	}
 	
 }
 
