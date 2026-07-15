@@ -163,6 +163,21 @@ class Queue{
 			return front == null;
 		
 	}
+	public void clear(){
+			front = null;
+	}
+	public void int search(int data){
+		Node temp = front;
+		int index = 0;
+		while(temp!=null){
+			if(temp.data = data){
+			return index;	
+			}
+			index++;
+			temp = temp.next;
+		}
+		return -1;
+	}
 	
 }
 
