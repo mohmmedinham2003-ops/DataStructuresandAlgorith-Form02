@@ -348,6 +348,11 @@ class Demo{
 			intList.add(500);
 			intList.add(600);
 			intList.printList(); //[100,200,300,400,500,600]
+
+			for (int i = 0; i < intList.size(); i++){
+			int data=intList.get(i);
+			System.out.println(data);
+			}
 			
 		}
 	
