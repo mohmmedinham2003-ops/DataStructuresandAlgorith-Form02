@@ -321,6 +321,18 @@ class List{
 		return -1;	
 	}
 
+	public int[] toArray(){
+	int[] tempDataArray = new int[size()];
+	Node temp = first;
+	for(int i =0;i<tempDataArray.length;i++){
+		tempDataArray[i] = temp.data;
+		temp = temp.next;
+	}
+	return tempDataArray;	
+		
+	}
+
+	
 
 	
 	
@@ -328,7 +340,14 @@ class List{
 
 class Demo{
 		public static void main(String args[]){
-			
+			List intList=new List();
+			intList.add(100);
+			intList.add(200);
+			intList.add(300);
+			intList.add(400);
+			intList.add(500);
+			intList.add(600);
+			intList.printList(); //[100,200,300,400,500,600]
 			
 		}
 	
