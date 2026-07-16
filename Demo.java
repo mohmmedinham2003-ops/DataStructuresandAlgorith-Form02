@@ -299,6 +299,29 @@ class List{
 		}
 		return count;
 	}
+
+	public boolean isEmpty(){
+	return first == null;	
+	}
+	
+	public void clear(){
+	first =null;	
+	}
+	
+	public int search(int data){
+		Node temp = first;
+		inde index = 0;
+		while(temp!=null){
+				if(temp.data == data){
+				return index;	
+				}
+				index++;
+				temp = temp.next;
+		}
+		return -1;	
+	}
+
+
 	
 	
 }
