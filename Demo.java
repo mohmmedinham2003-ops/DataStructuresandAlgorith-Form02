@@ -260,7 +260,22 @@ class List{
 	public void removeFirst(int data){
 		remove(0);
 	}
-	
+	public void remove(int index){
+		if(!isEmpty() && index >= 0 && index <= size()){
+			if(index == 0){
+			first = first.next;	
+			}else{
+			int count = 0;
+			Node temp = first;
+				while(count<index-1){
+					count++;
+					temp = temp.next;
+				}
+				temp = temp.next;
+			}	
+		}
+		
+	}	
 	
 	
 	
