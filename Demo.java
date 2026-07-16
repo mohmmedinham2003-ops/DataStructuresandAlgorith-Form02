@@ -216,163 +216,131 @@ import java.util.*;
 class Node{
 	int data;
 	Node next;
-	Node(int data){this.data = data;}
-	
+	Node(int data){this.data=data;}
 }
-
 class List{
 	private Node first;
-	public void add(int data){
-		addLast(data);
+
+	public void add(int data){ //Insertion order
+		addLast(data); //add(size(),data)
 	}
-	public void add(int index,int data){
-			if(index >=0 && index <= size()){
-				Node n1 = new Node();
-				if(index ==0){
-				n1.next = first;
-				first = n1;	
-			
+	public void add(int index, int data){
+		if(index>=0 && index<=size()){
+			Node n1=new Node(data);
+			if(index==0){
+				n1.next=first;
+				first=n1;
 			}else{
-			int count =0;
-			Node temp = first;
-			while(count<inde-1){
-			count++;
-			remp = temp.next;	
-			}	
-			n1.next = temp.next;
-			temp.next = n1;
+				int count=0;
+				Node temp=first;
+				while(count<index-1){
+					count++;
+					temp=temp.next;
+				}
+				n1.next=temp.next;
+				temp.next=n1;
 			}
-		
 		}
 	}
-	
 	public void addLast(int data){
 		add(size(),data);
 	}
-	
-	public void addfirst(int data){
-		add(0,data);
+	public void addFirst(int data){
+		add(0,data);		
 	}
-	public removeLast(){
-	remove(size()-1);	
+	public void removeLast(){
+		remove(size()-1);
 	}
-	
-	public void removeFirst(int data){
+	public void removeFirst(){
 		remove(0);
 	}
 	public void remove(int index){
-		if(!isEmpty() && index >= 0 && index <= size()){
-			if(index == 0){
-			first = first.next;	
+		if(!isEmpty() && index>=0 && index<size()){
+			if(index==0){
+				first=first.next;
 			}else{
-			int count = 0;
-			Node temp = first;
+				int count=0;
+				Node temp=first;
 				while(count<index-1){
 					count++;
-					temp = temp.next;
+					temp=temp.next;
 				}
-				temp = temp.next;
-			}	
+				temp.next=temp.next.next;
+			}
 		}
-		
 	}
-	
 	public int get(int index){
-		if(index >=0 && index < size()){
-		int count = 0;
-		Node temp = first;
+		if(index>=0 && index<size()){
+			int count=0;
+			Node temp=first;
 			while(count<index-1){
 				count++;
-				temp = temp.next;
+				temp=temp.next;
 			}
-			return temp.data	
+			return temp.data;
 		}
 		return -1;
 	}
-
 	public void printList(){
 		System.out.print("[");
-		Node temp = first;
+		Node temp=first;
+		while(temp!=null){
+			System.out.print(temp.data+", ");
+			temp=temp.next;
+		}
+		System.out.println(isEmpty() ?"empty]":"\b\b]");
+	}
+	public int size(){
+		Node temp=first;
+		int count=0;
 		while(temp!=null){
 			count++;
-			temp = temp.next;
+			temp=temp.next;
 		}
 		return count;
 	}
-
 	public boolean isEmpty(){
-	return first == null;	
+		return first==null;
 	}
-	
 	public void clear(){
-	first =null;	
+		first=null;
 	}
-	
 	public int search(int data){
-		Node temp = first;
-		inde index = 0;
+		Node temp=first;
+		int index=0;
 		while(temp!=null){
-				if(temp.data == data){
-				return index;	
-				}
-				index++;
-				temp = temp.next;
+			if(temp.data==data){
+				return index;
+			}
+			index++;
+			temp=temp.next;
 		}
-		return -1;	
+		return -1;
 	}
-
 	public int[] toArray(){
-	int[] tempDataArray = new int[size()];
-	Node temp = first;
-	for(int i =0;i<tempDataArray.length;i++){
-		tempDataArray[i] = temp.data;
-		temp = temp.next;
+		int[] tempDataArray=new int[size()];
+		Node temp=first;
+		for (int i = 0; i < tempDataArray.length; i++)	{
+			tempDataArray[i]=temp.data;
+			temp=temp.next;
+		}
+		return tempDataArray;
 	}
-	return tempDataArray;	
-		
-	}
-
-	
-
-	
-	
 }
-
 class Demo{
-		public static void main(String args[]){
-			List intList=new List();
-			intList.add(100);
-			intList.add(200);
-			intList.add(300);
-			intList.add(400);
-			intList.add(500);
-			intList.add(600);
-			intList.printList(); //[100,200,300,400,500,600]
-
-			for (int i = 0; i < intList.size(); i++){
+	public static void main(String args[]){
+		List intList=new List();
+		intList.add(100);
+		intList.add(200);
+		intList.add(300);
+		intList.add(400);
+		intList.add(500);
+		intList.add(600);
+		intList.printList(); //[100,200,300,400,500,600]
+		for (int i = 0; i < intList.size(); i++){
 			int data=intList.get(i);
 			System.out.println(data);
-			}
-			
 		}
-	
+		
+	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
