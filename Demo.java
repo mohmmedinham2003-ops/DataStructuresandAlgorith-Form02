@@ -275,8 +275,30 @@ class List{
 			}	
 		}
 		
-	}	
+	}
 	
+	public int get(int index){
+		if(index >=0 && index < size()){
+		int count = 0;
+		Node temp = first;
+			while(count<index-1){
+				count++;
+				temp = temp.next;
+			}
+			return temp.data	
+		}
+		return -1;
+	}
+
+	public void printList(){
+		System.out.print("[");
+		Node temp = first;
+		while(temp!=null){
+			count++;
+			temp = temp.next;
+		}
+		return count;
+	}
 	
 	
 }
